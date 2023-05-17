@@ -19,15 +19,15 @@ public class Principal_GUI extends javax.swing.JFrame {
      */
     public Principal_GUI() {
         initComponents();
-        Pedra.setVisible(false);
-        Papel.setVisible(false);
-        Tesoura.setVisible(false);
-        Pedra1.setVisible(false);
-        Papel1.setVisible(false);
-        Tesoura1.setVisible(false);
+        PedraPC.setVisible(false);
+        PapelPC.setVisible(false);
+        TesouraPC.setVisible(false);
+        PedraUser.setVisible(false);
+        PapelUser.setVisible(false);
+        TesouraUser.setVisible(false);
         
     }
-    int cont = 0;
+    
     
 
     /**
@@ -40,114 +40,115 @@ public class Principal_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        Tesoura = new org.edisoncor.gui.panel.PanelImage();
-        Pedra = new org.edisoncor.gui.panel.PanelImage();
-        Papel = new org.edisoncor.gui.panel.PanelImage();
-        Pedra1 = new org.edisoncor.gui.panel.PanelImage();
-        Papel1 = new org.edisoncor.gui.panel.PanelImage();
-        Tesoura1 = new org.edisoncor.gui.panel.PanelImage();
+        TesouraPC = new org.edisoncor.gui.panel.PanelImage();
+        PedraPC = new org.edisoncor.gui.panel.PanelImage();
+        PapelPC = new org.edisoncor.gui.panel.PanelImage();
+        PedraUser = new org.edisoncor.gui.panel.PanelImage();
+        PapelUser = new org.edisoncor.gui.panel.PanelImage();
+        TesouraUser = new org.edisoncor.gui.panel.PanelImage();
         jogar1 = new javax.swing.JButton();
+        TextResultado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("JOKENPO");
 
         jPanel1.setLayout(null);
 
-        Tesoura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tesoura.png"))); // NOI18N
+        TesouraPC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tesoura.png"))); // NOI18N
 
-        javax.swing.GroupLayout TesouraLayout = new javax.swing.GroupLayout(Tesoura);
-        Tesoura.setLayout(TesouraLayout);
-        TesouraLayout.setHorizontalGroup(
-            TesouraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout TesouraPCLayout = new javax.swing.GroupLayout(TesouraPC);
+        TesouraPC.setLayout(TesouraPCLayout);
+        TesouraPCLayout.setHorizontalGroup(
+            TesouraPCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 70, Short.MAX_VALUE)
         );
-        TesouraLayout.setVerticalGroup(
-            TesouraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        TesouraPCLayout.setVerticalGroup(
+            TesouraPCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(Tesoura);
-        Tesoura.setBounds(40, 90, 70, 70);
+        jPanel1.add(TesouraPC);
+        TesouraPC.setBounds(40, 90, 70, 70);
 
-        Pedra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/pedra.png"))); // NOI18N
+        PedraPC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/pedra.png"))); // NOI18N
 
-        javax.swing.GroupLayout PedraLayout = new javax.swing.GroupLayout(Pedra);
-        Pedra.setLayout(PedraLayout);
-        PedraLayout.setHorizontalGroup(
-            PedraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PedraPCLayout = new javax.swing.GroupLayout(PedraPC);
+        PedraPC.setLayout(PedraPCLayout);
+        PedraPCLayout.setHorizontalGroup(
+            PedraPCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 68, Short.MAX_VALUE)
         );
-        PedraLayout.setVerticalGroup(
-            PedraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PedraPCLayout.setVerticalGroup(
+            PedraPCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 68, Short.MAX_VALUE)
         );
 
-        jPanel1.add(Pedra);
-        Pedra.setBounds(40, 160, 68, 68);
+        jPanel1.add(PedraPC);
+        PedraPC.setBounds(40, 160, 68, 68);
 
-        Papel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/papel.png"))); // NOI18N
+        PapelPC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/papel.png"))); // NOI18N
 
-        javax.swing.GroupLayout PapelLayout = new javax.swing.GroupLayout(Papel);
-        Papel.setLayout(PapelLayout);
-        PapelLayout.setHorizontalGroup(
-            PapelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PapelPCLayout = new javax.swing.GroupLayout(PapelPC);
+        PapelPC.setLayout(PapelPCLayout);
+        PapelPCLayout.setHorizontalGroup(
+            PapelPCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 66, Short.MAX_VALUE)
         );
-        PapelLayout.setVerticalGroup(
-            PapelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PapelPCLayout.setVerticalGroup(
+            PapelPCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 65, Short.MAX_VALUE)
         );
 
-        jPanel1.add(Papel);
-        Papel.setBounds(40, 230, 66, 65);
+        jPanel1.add(PapelPC);
+        PapelPC.setBounds(40, 230, 66, 65);
 
-        Pedra1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/pedra.png"))); // NOI18N
+        PedraUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/pedra.png"))); // NOI18N
 
-        javax.swing.GroupLayout Pedra1Layout = new javax.swing.GroupLayout(Pedra1);
-        Pedra1.setLayout(Pedra1Layout);
-        Pedra1Layout.setHorizontalGroup(
-            Pedra1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PedraUserLayout = new javax.swing.GroupLayout(PedraUser);
+        PedraUser.setLayout(PedraUserLayout);
+        PedraUserLayout.setHorizontalGroup(
+            PedraUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 68, Short.MAX_VALUE)
         );
-        Pedra1Layout.setVerticalGroup(
-            Pedra1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PedraUserLayout.setVerticalGroup(
+            PedraUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 68, Short.MAX_VALUE)
         );
 
-        jPanel1.add(Pedra1);
-        Pedra1.setBounds(460, 160, 68, 68);
+        jPanel1.add(PedraUser);
+        PedraUser.setBounds(460, 160, 68, 68);
 
-        Papel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/papel.png"))); // NOI18N
+        PapelUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/papel.png"))); // NOI18N
 
-        javax.swing.GroupLayout Papel1Layout = new javax.swing.GroupLayout(Papel1);
-        Papel1.setLayout(Papel1Layout);
-        Papel1Layout.setHorizontalGroup(
-            Papel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PapelUserLayout = new javax.swing.GroupLayout(PapelUser);
+        PapelUser.setLayout(PapelUserLayout);
+        PapelUserLayout.setHorizontalGroup(
+            PapelUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 66, Short.MAX_VALUE)
         );
-        Papel1Layout.setVerticalGroup(
-            Papel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PapelUserLayout.setVerticalGroup(
+            PapelUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 65, Short.MAX_VALUE)
         );
 
-        jPanel1.add(Papel1);
-        Papel1.setBounds(460, 230, 66, 65);
+        jPanel1.add(PapelUser);
+        PapelUser.setBounds(460, 230, 66, 65);
 
-        Tesoura1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tesoura.png"))); // NOI18N
+        TesouraUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tesoura.png"))); // NOI18N
 
-        javax.swing.GroupLayout Tesoura1Layout = new javax.swing.GroupLayout(Tesoura1);
-        Tesoura1.setLayout(Tesoura1Layout);
-        Tesoura1Layout.setHorizontalGroup(
-            Tesoura1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout TesouraUserLayout = new javax.swing.GroupLayout(TesouraUser);
+        TesouraUser.setLayout(TesouraUserLayout);
+        TesouraUserLayout.setHorizontalGroup(
+            TesouraUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 70, Short.MAX_VALUE)
         );
-        Tesoura1Layout.setVerticalGroup(
-            Tesoura1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        TesouraUserLayout.setVerticalGroup(
+            TesouraUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 70, Short.MAX_VALUE)
         );
 
-        jPanel1.add(Tesoura1);
-        Tesoura1.setBounds(460, 90, 70, 70);
+        jPanel1.add(TesouraUser);
+        TesouraUser.setBounds(460, 90, 70, 70);
 
         jogar1.setText("Jogar");
         jogar1.addActionListener(new java.awt.event.ActionListener() {
@@ -157,6 +158,8 @@ public class Principal_GUI extends javax.swing.JFrame {
         });
         jPanel1.add(jogar1);
         jogar1.setBounds(200, 290, 149, 30);
+        jPanel1.add(TextResultado);
+        TextResultado.setBounds(170, 140, 210, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -174,81 +177,61 @@ public class Principal_GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jogar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogar1ActionPerformed
+       
+        PedraPC.setVisible(false);
+        PapelPC.setVisible(false);
+        TesouraPC.setVisible(false);
+        PedraUser.setVisible(false);
+        PapelUser.setVisible(false);
+        TesouraUser.setVisible(false);
         
-        
-        do {
         Random gerador = new Random();
-        int maquina = gerador.nextInt(3);
+        int maquina = gerador.nextInt(2) + 0;
         String x = JOptionPane.showInputDialog(null, "[0] - Pedra\n"
                 + "[1] - Papel\n"
                 + "[2] - Tesoura");
        int jogador = Integer.parseInt(x);
         
+        switch(maquina){
+                case 0:
+                    PedraPC.setVisible(true);
+                    PapelPC.setVisible(false);
+                    TesouraPC.setVisible(false);
+                case 1:
+                    PedraPC.setVisible(false);
+                    PapelPC.setVisible(true);
+                    TesouraPC.setVisible(false);
+                case 2:
+                    PedraPC.setVisible(false);
+                    PapelPC.setVisible(false);
+                    TesouraPC.setVisible(true);
+            }
+            switch(jogador){
+                case 0:
+                    PedraUser.setVisible(true);
+                    PapelUser.setVisible(false);
+                    TesouraUser.setVisible(false);
+                case 1:
+                    PedraUser.setVisible(false);
+                    PapelUser.setVisible(true);
+                    TesouraUser.setVisible(false);
+                case 2:
+                    PedraUser.setVisible(false);
+                    PapelUser.setVisible(false);
+                    TesouraUser.setVisible(true);
+            }
         if(maquina == 0 && jogador == 1){
-            Pedra.setVisible(true);
-            Papel1.setVisible(true);
-            JOptionPane.showMessageDialog(null, "Parabéns VITORIA");
-            cont = 1;
-        }
-        else if(maquina == 1 && jogador == 2){
-            Papel.setVisible(true);
-            Tesoura1.setVisible(true);
-            JOptionPane.showMessageDialog(null, "Parabéns VITORIA");
-            cont = 1;
-        }
-        else if(maquina == 2 && jogador == 0){
-            Tesoura.setVisible(true);
-            Pedra1.setVisible(true);
-            JOptionPane.showMessageDialog(null, "Parabéns VITORIA");
-            cont = 1;
-        }
-        else if(maquina == jogador){
-            JOptionPane.showMessageDialog(null, "Empate Tente Novamente");
-            switch(maquina){
-                case 0:
-                    Pedra.setVisible(true);
-                case 1:
-                    Papel.setVisible(true);
-                case 2:
-                    Tesoura.setVisible(true);
+            TextResultado.setText("Parabéns Vitoria !!!");
+        }else if(maquina == 1 && jogador == 2){
+            TextResultado.setText("Parabéns Vitoria !!!");
+        }else if(maquina == 2 && jogador == 0){
+            TextResultado.setText("Parabéns Vitoria !!!"); 
+        }else if(maquina == jogador){
+            TextResultado.setText("Empate Tente Novamente");
+        }else{
+            TextResultado.setText("Voce perdeu Tente Novamente !!!");
             }
-            switch(jogador){
-                case 0:
-                    Pedra1.setVisible(true);
-                case 1:
-                    Papel1.setVisible(true);
-                case 2:
-                    Tesoura1.setVisible(true);
-            }
-            cont = 1;
-        }
-        else{
-            switch(maquina){
-                case 0:
-                    Pedra.setVisible(true);
-                case 1:
-                    Papel.setVisible(true);
-                case 2:
-                    Tesoura.setVisible(true);
-            }
-            switch(jogador){
-                case 0:
-                    Pedra1.setVisible(true);
-                case 1:
-                    Papel1.setVisible(true);
-                case 2:
-                    Tesoura1.setVisible(true);
-            }
-            JOptionPane.showMessageDialog(null, "Você Perdeu! Tente Novamente");
-        }
         
-        Pedra.setVisible(false);
-        Papel.setVisible(false);
-        Tesoura.setVisible(false);
-        Pedra1.setVisible(false);
-        Papel1.setVisible(false);
-        Tesoura1.setVisible(false);
-        } while (cont == 0);
         
     }//GEN-LAST:event_jogar1ActionPerformed
 
@@ -288,12 +271,13 @@ public class Principal_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private org.edisoncor.gui.panel.PanelImage Papel;
-    private org.edisoncor.gui.panel.PanelImage Papel1;
-    private org.edisoncor.gui.panel.PanelImage Pedra;
-    private org.edisoncor.gui.panel.PanelImage Pedra1;
-    private org.edisoncor.gui.panel.PanelImage Tesoura;
-    private org.edisoncor.gui.panel.PanelImage Tesoura1;
+    private org.edisoncor.gui.panel.PanelImage PapelPC;
+    private org.edisoncor.gui.panel.PanelImage PapelUser;
+    private org.edisoncor.gui.panel.PanelImage PedraPC;
+    private org.edisoncor.gui.panel.PanelImage PedraUser;
+    private org.edisoncor.gui.panel.PanelImage TesouraPC;
+    private org.edisoncor.gui.panel.PanelImage TesouraUser;
+    private javax.swing.JLabel TextResultado;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jogar1;
     // End of variables declaration//GEN-END:variables
